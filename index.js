@@ -10,11 +10,11 @@ function DisplaySliderVal() {
 
 
 function handleSubmit() {
-    const capacityOpt = document.getElementById("capacityOption").value
+    let capacityOpt = document.getElementById("capacityOption").value
     let capacity = document.getElementById("capacity_text").value
-    const speed = document.getElementById("speedOption").value
+    let speed = document.getElementById("speedOption").value
     let transfer_speed = document.getElementById("transfer_speed").value;
-    const resultDiv = document.getElementById("result");
+    let resultDiv = document.getElementById("result");
     let result;
     if(capacityOpt != "MB") {
         if(capacityOpt == "GB") {
@@ -24,8 +24,6 @@ function handleSubmit() {
             capacity *= Math.pow(1000,2)
 
         }
-
-    
     }
 
     if(speed != "Mbps") {
@@ -41,7 +39,7 @@ function handleSubmit() {
     }
     result = capacity / transfer_speed;
     console.log(result)
-    resultDiv.children[0].innerHTML = `${result} másodperc, ${(result/60).toFixed(1)} perc`;
+    resultDiv.children[0].innerHTML = `${result.toFixed(2)} másodperc, ${(result/60).toFixed(1)} perc`;
 }
 
 
