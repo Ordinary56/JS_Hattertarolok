@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+
+form {
+
+    margin:  10px auto;
+    width: 21vw;
+    height: max-content;
+    & > fieldset {
+        border-radius: 16px;
+        border-color: transparent;
+        box-shadow: 10px 10px 10px #BABABA;
+        border-style: solid;
+
+        & > label {
+            text-decoration: underline;
+        }
+
+        & > input[type="button"] {
+            border: none;
+            height: 2rem;
+            width: 16em;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+    }
+}
+
+
+
+
+#result {
+    display: flex;
+    background-color: #9c9c9c;
+    height: 6vh;
+    width: 20vw;
+    margin: 25px auto auto auto;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 10px 10px #BABABA;
+    border-radius: 10px;
+    & > p {
+        text-decoration: underline;
+        text-align: center;
+        color: #FFF;
+    }
+}

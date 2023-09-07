@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hattertarolok</title>
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="get" name="driveForm">
+        <fieldset>
+            <label for="capacity">Kapacitás:</label>
+            <input type="text" name="capacity" id="capacity_text">
+            <select name="" id="capacityOption" >
+                <option value="MB">MB</option>
+                <option value="GB">GB</option>
+                <option value="TB">TB</option>
+            </select>
+            <br>
+            <br>
+            <label for="speed">Átviteli Sebesség:</label>
+            <input type="range" min="10" max="5000" name="speed" id="transfer_speed" oninput="DisplaySliderVal()">
+            <label for="" id="sliderVal"></label>
+            <select name="" id="speedOption" >
+                <option value="MB">Mbps</option>
+                <option value="MB">mbps</option>
+                <option value="GB">Gbps</option>    
+                <option value="TB">Kbps</option>
+            </select>
+            <br><br>
+            <input type="button" value="Kiszámol" onclick=" handleSubmit()" >
+        </fieldset>
+    </form>
+
+    <div id="result">
+        <p id="result_text"></p>
+    </div>
+</body>
+</html>
